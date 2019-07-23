@@ -46,7 +46,7 @@ const bec = {
 const hamAndSwiss = {
     code: 'ham-and-swiss',
     name: 'Ham and Swiss',
-    description: '',
+    description: 'When it\'s classic keep it simple',
     category: 'cold',
     price: 5.20,
     cost: 2.78
