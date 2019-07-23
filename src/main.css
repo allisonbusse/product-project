@@ -10,7 +10,7 @@ body {
     margin: 0 auto;
 }
 
-h1, h2, h3 {
+h1, h2 {
     color: #BDE4A8;
     font-family: 'Poiret One', cursive;
 }
@@ -29,14 +29,20 @@ h1 {
 
 #product-list li {
     width: 400px;
-    height: 250px;
+    height: 350px;
     list-style: none;
     margin-right: 10px;
+    margin-bottom: 10px;
     padding: 15px;
     text-align: center;
     background: rgb(218, 230, 206);
     color: #3C6E71;
     font-size: 20px;
+}
+
+li img {
+    width: 70%;
+    border: 1px solid #ccc;
 }
 
 button {
