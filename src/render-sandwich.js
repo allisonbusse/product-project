@@ -17,6 +17,9 @@ function renderSandwich(sandwich) {
 
     const pTwo = document.createElement('p');
     li.appendChild(pTwo);
+    const usd = sandwich.price.toLocaleString('en-US', { style: 'currency', currency: 'USD' });
+    const priceTextNode = document.createTextNode(usd + ' ');
+    pTwo.appendChild(priceTextNode);
 
     const button = document.createElement('button');
     button.value = sandwich.code;
