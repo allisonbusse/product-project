@@ -5,7 +5,7 @@ const blta = {
     category: 'hot',
     price: 8.00,
     cost: 3.46 
-}
+};
 
 const tuna = {
     code: 'tuna',
@@ -14,7 +14,7 @@ const tuna = {
     category: 'hot',
     price: 7.50,
     cost: 2.86
-}
+};
 
 const turkeyCheese = {
     code: 'turkey-cheese',
@@ -23,7 +23,7 @@ const turkeyCheese = {
     category: 'cold',
     price: 6.00,
     cost: 3.00
-}
+};
 
 const grilledCheese = {
     code: 'grilled-cheese',
@@ -32,7 +32,7 @@ const grilledCheese = {
     category: 'hot',
     price: 6.50,
     cost: 4.02
-}
+};
 
 const bec = {
     code: 'bec',
@@ -41,7 +41,7 @@ const bec = {
     category: 'breakfast',
     price: 4.00,
     cost: 3.76
-}
+};
 
 const hamAndSwiss = {
     code: 'ham-and-swiss',
@@ -50,7 +50,7 @@ const hamAndSwiss = {
     category: 'cold',
     price: 5.20,
     cost: 2.78
-}
+};
 
 const sandwiches = [
     blta,
@@ -59,6 +59,6 @@ const sandwiches = [
     grilledCheese,
     bec,
     hamAndSwiss
-]
+];
 
 export default sandwiches;
