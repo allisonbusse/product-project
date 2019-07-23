@@ -15,7 +15,7 @@ test('render grilled cheese', function(assert) {
         cost: 4.02
     }
     
-    const expected = '<li class="hot"><h3>Grilled Cheese</h3><img src="/assets/grilled-cheese.jpg" alt="grilled-cheese image"><p>Go back to being a kid</p><p>$6.50<button value="grilled-cheese">Add</button></p></li>';
+    const expected = '<li class="hot" title="Go back to being a kid"><h3>Grilled Cheese</h3><img src="/assets/grilled-cheese.jpg" alt="grilled-cheese image"><p class="price">$6.50 <button value="grilled-cheese">Add</button></p></li>';
 
     //Act 
     // Call the function you're testing and set the result to a const

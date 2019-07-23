@@ -43,12 +43,22 @@ const bec = {
     cost: 3.76
 }
 
+const hamAndSwiss = {
+    code: 'ham-and-swiss',
+    name: 'Ham and Swiss',
+    description: '',
+    category: 'cold',
+    price: 5.20,
+    cost: 2.78
+}
+
 const sandwiches = [
     blta,
     tuna,
     turkeyCheese,
     grilledCheese,
-    bec
+    bec,
+    hamAndSwiss
 ]
 
 export default sandwiches;
