@@ -1,4 +1,4 @@
-import sandwiches from './sandwiches.js';
+import sandwiches from './data/sandwiches.js';
 import renderSandwiches from './render-sandwich.js';
 
 const showAllCategory = document.getElementById('show-all-category')
