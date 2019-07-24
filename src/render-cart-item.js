@@ -1,4 +1,5 @@
 import { getLineTotal } from './register.js';
+import { toUSD } from './format.js';
 
 function renderCartItem(cart, sandwich) {
     let tr = document.createElement('tr');
@@ -13,12 +14,12 @@ function renderCartItem(cart, sandwich) {
 
     const unitPriceCell = document.createElement('td');
     tr.appendChild(unitPriceCell);
-    const usd = sandwich.price.toLocaleString('en-US', { style: 'currency', currency: 'USD' });
+    const usd = toUSD(sandwich.price);
     const priceTextNode = document.createTextNode(usd + ' ');
     unitPriceCell.appendChild(priceTextNode);
 
     const totalPriceCell = document.createElement('td');
-    totalPriceCell.textContent = getLineTotal(cart.quantity, sandwich.price).toLocaleString('en-US', { style: 'currency', currency: 'USD' });
+    totalPriceCell.textContent = toUSD(getLineTotal(cart.quantity, sandwich.price));
     tr.appendChild(totalPriceCell);
 
     return tr;

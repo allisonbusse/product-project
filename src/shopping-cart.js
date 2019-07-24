@@ -2,6 +2,7 @@ import sandwiches from './data/sandwiches.js';
 import cart from './data/cart.js';
 import { getOrderTotal, findProduct } from './register.js';
 import renderCartItem from './render-cart-item.js';
+import { toUSD } from './format.js';
 
 // Access DOM elements
 const cartTable = document.getElementById('cart-content');
@@ -11,7 +12,7 @@ const promoCodeInput = document.getElementById('promo-code');
 const promoCodeApply = document.getElementById('apply-promo-code');
 
 // Populate table footer with order total
-const orderTotal = getOrderTotal(cart, sandwiches).toLocaleString('en-US', { style: 'currency', currency: 'USD' });
+const orderTotal = toUSD(getOrderTotal(cart, sandwiches));
 tableFooter.textContent = orderTotal;
 
 // Populate table cells with cart.js data
