@@ -9,15 +9,18 @@ QUnit.module('Cart Rendering');
 test('render cart item', function(assert) {
     //Arrange
     // Set up your parameters and expectations
-    const quantity = 2;
-    const code = 'grilled-cheese';
-    
-    const expected = '<tr><td>Grilled Cheese</td><td>2</td><td>$6.50</td><td>$13.00</td></tr>';
+    const lineItem = {
+        code: 'grilled-cheese',
+        quantity: 2
+    };
+    const grilledCheese = findProduct(sandwiches, lineItem.code);
+    const expected = '<tr><td>Grilled Cheese</td><td>2</td><td>$6.50 </td><td>$13.00</td></tr>';
 
     //Act 
     // Call the function you're testing and set the result to a const
-    const result = renderCartItem(cart);
+    const result = renderCartItem(lineItem, grilledCheese);
+    const html = result.outerHTML;
 
     //Assert
-    assert.equal(result, expected);
+    assert.equal(html, expected);
 });

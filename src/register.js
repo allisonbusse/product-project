@@ -1,6 +1,3 @@
-import sandwiches from './data/sandwiches.js';
-import cart from './data/cart.js';
-
 export function getLineTotal(quantity, price) {
     return Number((quantity * price).toFixed(2));
 }
