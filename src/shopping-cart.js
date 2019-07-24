@@ -11,7 +11,7 @@ const promoCodeInput = document.getElementById('promo-code');
 const promoCodeApply = document.getElementById('apply-promo-code');
 
 // Populate table footer with order total
-const orderTotal = getOrderTotal(cart, sandwiches);
+const orderTotal = getOrderTotal(cart, sandwiches).toLocaleString('en-US', { style: 'currency', currency: 'USD' });
 tableFooter.textContent = orderTotal;
 
 // Populate table cells with cart.js data
