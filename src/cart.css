@@ -1,0 +1,47 @@
+h2 {
+    text-align: center;
+    font-size: 30px;
+}
+table {
+    width: 60%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    border: 1px solid rgb(218, 230, 206);
+    text-align: center;
+}
+
+tbody {
+    background: rgb(218, 230, 206);
+    color: black;
+}
+
+tbody tr:nth-child(even) {
+    background: white;
+}
+
+table td, th {
+    padding: 10px;
+}
+
+thead {
+    color: rgb(218, 230, 206);
+    background: #3C6E71;
+    box-shadow: 1px 1px #666;
+    font-size: 18px;
+}
+
+tfoot {
+    background: #BDE4A8;
+    color: #483C46;
+    font-size: 18px;
+}
+
+#button-section {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 22px;
+}
+
+#promo-code {
+    font-size: 18px;
+}
