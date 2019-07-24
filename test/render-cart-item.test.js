@@ -1,6 +1,5 @@
-import { getLineTotal, findProduct, getOrderTotal } from '../src/register.js';
+import { findProduct } from '../src/register.js';
 import sandwiches from '../src/data/sandwiches.js';
-import cart from '../src/data/cart.js';
 import renderCartItem from '../src/render-cart-item.js';
 
 const test = QUnit.test;
