@@ -39,4 +39,9 @@ tfoot {
 #button-section {
     text-align: center;
     margin-top: 40px;
+    font-size: 22px;
+}
+
+#promo-code {
+    font-size: 18px;
 }
