@@ -1,3 +1,5 @@
+import store from './store.js';
+
 export function getLineTotal(quantity, price) {
     return Number((quantity * price).toFixed(2));
 }
@@ -13,13 +15,13 @@ export function findProduct(sandwiches, code) {
     return null;
 }
 
-export function getOrderTotal(cart, sandwiches) {
+export function getOrderTotal(cart) {
     let lineTotal;
     let i;
     let cartSandwich;
     let orderTotal = 0;
     for(i = 0; i < cart.length; i++) {
-        cartSandwich = findProduct(sandwiches, cart[i].code);
+        cartSandwich = store.getProduct(cart[i].code);
         lineTotal = getLineTotal(cart[i].quantity, cartSandwich.price);
         orderTotal += lineTotal; 
     }

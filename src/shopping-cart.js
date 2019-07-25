@@ -1,6 +1,4 @@
-import sandwiches from './data/sandwiches.js';
-import cart from './data/cart.js';
-import { getOrderTotal, findProduct } from './register.js';
+import { getOrderTotal } from './register.js';
 import renderCartItem from './render-cart-item.js';
 import { toUSD } from './format.js';
 import store from './store.js';
@@ -17,7 +15,7 @@ const promoCodeApply = document.getElementById('apply-promo-code');
 const shoppingCart = store.getShoppingCart();
 
 // Populate table footer with order total
-const orderTotal = toUSD(getOrderTotal(shoppingCart, sandwiches));
+const orderTotal = toUSD(getOrderTotal(shoppingCart));
 tableFooter.textContent = orderTotal;
 
 // Populate table cells with cart.js data
