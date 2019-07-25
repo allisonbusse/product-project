@@ -3,7 +3,7 @@ import renderSandwich from '../src/render-sandwich.js';
 const test = QUnit.test;
 QUnit.module('Render Sandwich');
 
-test('render grilled cheese', function(assert) {
+test('render grilled cheese', assert => {
     //Arrange
     // Set up your parameters and expectations
     const grilledCheese = {

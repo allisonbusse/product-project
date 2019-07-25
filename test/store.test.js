@@ -10,7 +10,7 @@ QUnit.testStart(() => {
 store.storage = window.sessionStorage;
 
 
-test('check storage location', function(assert) {
+test('check storage location', assert => {
     //Arrange
     // Set up your parameters and expectations
     const expected = window.sessionStorage;
@@ -23,7 +23,7 @@ test('check storage location', function(assert) {
     assert.equal(result, expected);
 });
 
-test('check get and save', function(assert) {
+test('check get and save', assert => {
     //Arrange
     // Set up your parameters and expectations
     const key = 'sandwich';
@@ -38,7 +38,7 @@ test('check get and save', function(assert) {
     assert.deepEqual(result, sandwich);
 });
 
-test('get products', function(assert) {
+test('get products', assert => {
     //Arrange
     // Set up your parameters and expectations
     const expected = sandwiches;
@@ -51,7 +51,7 @@ test('get products', function(assert) {
     assert.deepEqual(result, expected);
 });
 
-test('get shopping cart', function(assert) {
+test('get shopping cart', assert => {
     //Arrange
     // Set up your parameters and expectations
     const expected = [];
@@ -64,7 +64,7 @@ test('get shopping cart', function(assert) {
     assert.deepEqual(result, expected);
 });
 
-test('add product code', function(assert) {
+test('add product code', assert => {
     //Arrange
     // Set up your parameters and expectations
     const expected = [{ code: 'blta', quantity: 1 }];
@@ -80,7 +80,7 @@ test('add product code', function(assert) {
 });
 
 
-test('add multiple product code', function(assert) {
+test('add multiple product code', assert => {
     //Arrange
     // Set up your parameters and expectations
     const expected = [{ code: 'blta', quantity: 3 }];
@@ -98,7 +98,7 @@ test('add multiple product code', function(assert) {
 });
 
 
-test('get product code', function(assert) {
+test('get product code', assert => {
     //Arrange
     // Set up your parameters and expectations
     const expected = sandwiches[0];

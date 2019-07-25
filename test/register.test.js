@@ -5,7 +5,7 @@ import cart from '../src/data/cart.js';
 const test = QUnit.test;
 QUnit.module('Cart Functions');
 
-test('get line total', function(assert) {
+test('get line total', assert => {
     //Arrange
     // Set up your parameters and expectations
     const quantity = 3;
@@ -21,7 +21,7 @@ test('get line total', function(assert) {
     assert.equal(result, expected);
 });
 
-test('find product info', function(assert) {
+test('find product info', assert => {
     //Arrange
     // Set up your parameters and expectations
     const code = 'blta';
@@ -43,7 +43,7 @@ test('find product info', function(assert) {
     assert.deepEqual(result, expected);
 });
 
-test('get order total', function(assert) {
+test('get order total', assert => {
     //Arrange
     // Set up your parameters and expectations
     const expected = 59.00;

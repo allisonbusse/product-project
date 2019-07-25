@@ -5,7 +5,7 @@ import renderCartItem from '../src/render-cart-item.js';
 const test = QUnit.test;
 QUnit.module('Cart Rendering');
 
-test('render cart item', function(assert) {
+test('render cart item', assert => {
     //Arrange
     // Set up your parameters and expectations
     const lineItem = {
