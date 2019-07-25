@@ -1,4 +1,4 @@
-import sandwiches from './data/sandwiches.js';
+import store from './store.js';
 import renderSandwiches from './render-sandwich.js';
 
 const showAllCategory = document.getElementById('show-all-category');
@@ -10,8 +10,10 @@ let listItem;
 let i;
 
 // Loop to display all sandwich options
-for(let i = 0; i < sandwiches.length; i++) {
-    const sandwich = sandwiches[i];
+let products = store.getProducts();
+
+for(let i = 0; i < products.length; i++) {
+    const sandwich = products[i];
     listItem = renderSandwiches(sandwich);
     eachSandwich.appendChild(listItem);
 }
