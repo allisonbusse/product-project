@@ -1,4 +1,5 @@
 import sandwiches from './data/sandwiches.js';
+import { findProduct } from './register.js';
 
 const store = {
     storage: window.localStorage,
@@ -27,8 +28,20 @@ const store = {
 
     addProductCode(code) {
         let shoppingCart = store.getShoppingCart();
-        const lineItem = 
-        store.save.shoppingCart;
+        const lineItem = findProduct(shoppingCart, code);
+        if(lineItem) {
+            lineItem.quantity++;
+        }
+        else {
+            const lineItem = {
+                code: code,
+                quantity: 1
+            };
+
+            shoppingCart.push(lineItem);
+        }
+        
+        store.save('shopping-cart', shoppingCart);
     },
 
     getShoppingCart() {
@@ -37,6 +50,12 @@ const store = {
             shoppingCart = [];
         }
         return shoppingCart;
+    },
+
+    getProduct(code) {
+        const products = store.getProducts();
+        const product = findProduct(products, code);
+        return product;
     }
 };
 

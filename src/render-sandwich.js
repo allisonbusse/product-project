@@ -1,3 +1,5 @@
+import store from './store.js';
+
 function renderSandwich(sandwich) {
     const li = document.createElement('li');
     li.className = sandwich.category;
@@ -22,6 +24,9 @@ function renderSandwich(sandwich) {
     const button = document.createElement('button');
     button.value = sandwich.code;
     button.textContent = 'Add';
+    button.addEventListener('click', () => {
+        store.addProductCode(button.value);
+    });
     pTwo.appendChild(button);
 
     return li;

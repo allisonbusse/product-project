@@ -3,9 +3,9 @@ import sandwiches from '../src/data/sandwiches.js';
 
 const test = QUnit.test;
 QUnit.module('Data Store Tests');
-// QUnit.testStart(() => {
-//     store.storage.clear();
-// }); 
+QUnit.testStart(() => {
+    store.storage.clear();
+}); 
 
 store.storage = window.sessionStorage;
 
@@ -67,11 +67,47 @@ test('get shopping cart', function(assert) {
 test('add product code', function(assert) {
     //Arrange
     // Set up your parameters and expectations
-    const expected = { code: 'blta', quantity: 1 };
+    const expected = [{ code: 'blta', quantity: 1 }];
+    const code = 'blta';
 
     //Act 
     // Call the function you're testing and set the result to a const
-    const result = store.addProductCode();
+    store.addProductCode(code);
+    const result = store.getShoppingCart();
+    
+    //Assert
+    assert.deepEqual(result, expected);
+});
+
+
+test('add multiple product code', function(assert) {
+    //Arrange
+    // Set up your parameters and expectations
+    const expected = [{ code: 'blta', quantity: 3 }];
+    const code = 'blta';
+
+    //Act 
+    // Call the function you're testing and set the result to a const
+    store.addProductCode(code);
+    store.addProductCode(code);
+    store.addProductCode(code);
+    const result = store.getShoppingCart();
+    
+    //Assert
+    assert.deepEqual(result, expected);
+});
+
+
+test('get product code', function(assert) {
+    //Arrange
+    // Set up your parameters and expectations
+    const expected = sandwiches[0];
+    const code = 'blta';
+
+    //Act 
+    // Call the function you're testing and set the result to a const
+   // console.log(sandwiches[0]);
+    const result = store.getProduct(code);
     
     //Assert
     assert.deepEqual(result, expected);
