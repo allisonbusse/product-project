@@ -9,6 +9,7 @@ const tableFooter = document.getElementById('table-footer');
 let tableRow;
 const promoCodeInput = document.getElementById('promo-code');
 const promoCodeApply = document.getElementById('apply-promo-code');
+const order = document.getElementById('order');
 
 
 // Get shopping cart data
@@ -31,4 +32,13 @@ promoCodeApply.addEventListener('click', () => {
     if(promoCodeInput.value === 'SAVE20') {
         tableFooter.textContent = orderTotal * 0.8;
     }
+});
+
+// Event listener to place order 
+order.addEventListener('click', () => {
+    let i;
+    for(i = 0; i < shoppingCart.length; i++) {
+        store.placeOrder(shoppingCart[i]);
+    }
+    alert('Thanks for your order!');
 });

@@ -62,7 +62,33 @@ const store = {
         const products = store.getProducts();
         products.push(newProduct);
         store.save('products', products);
-    }
+    },
+
+    placeOrder(shoppingCartItem) {
+        let sales = store.getSales();
+        const lineItem = findProduct(sales, shoppingCartItem.code);
+        if(lineItem) {
+            lineItem.quantity += shoppingCartItem.quantity;
+        }
+        else {
+            const lineItem = {
+                code: shoppingCartItem.code,
+                quantity: shoppingCartItem.quantity,
+            };
+
+            sales.push(lineItem);
+        }
+        
+        store.save('sales', sales);
+    },
+
+    getSales() {
+        let sales = store.get('sales');
+        if(!sales) {
+            sales = [];
+        }
+        return sales;
+    },
 };
 
 
