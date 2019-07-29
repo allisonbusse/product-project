@@ -20,8 +20,4 @@ for(let i = 0; i < sales.length; i++) {
     reportTable.appendChild(tableRow);
 }
 
-// Populate table footer with order total
-const orderTotal = getReportTotal(cartItem);
-tableFooter.textContent = orderTotal;
-
 

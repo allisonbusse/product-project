@@ -23,7 +23,6 @@ form.addEventListener('submit', (event) => {
         };
     
         store.addProduct(newProduct);
-        console.log(newProduct);
         alert('New product added!');
         form.reset();
         
