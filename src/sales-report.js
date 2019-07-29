@@ -1,10 +1,8 @@
-import { getReportTotal } from './register.js';
 import renderReportItem from './render-sales-report.js';
 import store from './store.js';
 
 // Access DOM elements
 const reportTable = document.getElementById('report-content');
-const tableFooter = document.getElementById('table-footer');
 let tableRow;
 
 
