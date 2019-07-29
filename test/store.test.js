@@ -120,7 +120,7 @@ test('add new product', assert => {
         code: 'banh-mi',
         name: 'Banh Mi',
         image: 'banh-mi.jpg',
-        description: 'Spicy and delicous', 
+        description: 'Spicy and delicious', 
         category: 'hot',
         price: 4.00,
         cost: 2.50

@@ -29,15 +29,21 @@
         <h2 class="indented">Add a New Product</h2>
         <form id="product-form">
         <p>
-            <label for="name">Sandwich Name: <input type="text" name="name" id="name"></label></p>
+            <label for="name">Sandwich Name: </label>
+            <input type="text" name="name" id="name">
+        </p>
         <p>
-            <label for="code">Sandwich Code: <input type="text" name="code" id="code"></label></p>
+            <label for="code">Sandwich Code: </label>
+                <input type="text" name="code" id="code">
+                </p>
         <p>
             <label for="image-src">Sandwich Image:</label>
             <input type="file" name="image-src" id="image-src">
         </p>
         <p>
-            <label for="description">Description: <input type="textarea" name="description" id="description"></label></p>
+            <label for="description">Description: </label>
+            <input type="textarea" name="description" id="description">
+        </p>
         <p>
             <label for="category">Category: </label>
             <select name="category" id="category">
@@ -48,13 +54,18 @@
             </select>
         </p>
         <p>
-            <label for="price">Sale Price: <input type="number" name="price" id="price"></label></p>
+            <label for="price">Sale Price: </label>
+                <input type="number" name="price" id="price">
+            </p>
         <p>
-            <label for="cost">Our Cost: <input type="number" name="cost" id="cost"></label></p>
+            <label for="cost">Our Cost: </label>
+                <input type="number" name="cost" id="cost">
+            </p>
         <p>
-            <button id="add-item">Add Item</button></p>
+            <button id="add-item">Add Item</button>
+        </p>
         </form>
     </main>
-    
+    <script src="/src/product-entry.js" type="module"></script>
 </body>
 </html>
