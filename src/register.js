@@ -27,3 +27,14 @@ export function getOrderTotal(cart) {
     }
     return orderTotal;   
 }
+
+export function getReportTotal(reportItem) {
+    let i;
+    const sales = store.getSales();
+    reportItem = sales[i];
+    let reportTotal = 0;
+    for(i = 0; i < sales.length; i++) {
+        reportTotal += reportItem.quantity;
+    }
+    return reportTotal;
+}

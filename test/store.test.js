@@ -153,11 +153,14 @@ test('place order', assert => {
     //Arrange
     // Set up your parameters and expectations
     const expected = [{ code: 'blta', quantity: 2 }];
-    const code = sandwiches[0];
-
+    const shoppingCartItem = {
+        code: 'blta',
+        quantity: 2
+    };
+   
     //Act 
     // Call the function you're testing and set the result to a const
-    store.placeOrder(code);
+    store.placeOrder(shoppingCartItem);
     const result = store.getSales();
     
     //Assert
