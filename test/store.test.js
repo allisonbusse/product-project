@@ -113,3 +113,26 @@ test('get product code', assert => {
     assert.deepEqual(result, expected);
 });
 
+test('add new product', assert => {
+    //Arrange
+    // Set up your parameters and expectations
+    const product = {
+        code: 'banh-mi',
+        name: 'Banh Mi',
+        image: 'banh-mi.jpg',
+        description: 'Spicy and delicous', 
+        category: 'hot',
+        price: 4.00,
+        cost: 2.50
+    };
+    
+    //Act 
+    // Call the function you're testing and set the result to a const
+    // console.log(sandwiches[0]);
+    store.addProduct(product);
+    const sandwiches = store.getProducts();
+    
+    //Assert
+    assert.deepEqual(sandwiches[sandwiches.length - 1], product);
+});
+

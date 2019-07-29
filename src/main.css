@@ -70,3 +70,7 @@ button {
     text-transform: uppercase;
     border: 1px solid #BDE4A8;
 }
+
+form, .indented {
+    margin-left: 20%;
+}

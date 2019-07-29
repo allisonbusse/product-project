@@ -56,6 +56,12 @@ const store = {
         const products = store.getProducts();
         const product = findProduct(products, code);
         return product;
+    },
+
+    addProduct(newProduct) {
+        const products = store.getProducts();
+        products.push(newProduct);
+        store.save('products', products);
     }
 };
 
